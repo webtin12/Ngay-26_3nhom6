@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Các hoạt động trong ngày 26/3</title>
+<link href="krb1.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="startAnimation()">
+    <div id="intro" class="intro-animation">
+        <header>
+            <div class="banner">
+                <h1>BÁO TƯỞNG NGÀY THÀNH LẬP ĐOÀN 26/3</h1>
+            </div>
+            <div class="slogan">
+                <div class="row">
+                    <div class="block_3"><h2>Thanh niên</h2><p>Hành trang lý tưởng, hoài bão</p></div>
+                    <div class="block_3"><h2>Khát vọng</h2><p>Sáng tạo và khẳng định bản thân</p></div>
+                    <div class="block_3"><h2>Tuổi trẻ</h2><p>Nâng cao tinh thần đoàn kết</p></div>
+                </div>
+            </div>
+        </header>
+    </div>
+    
+<section>
+<h2>Các Hoạt Động Trong Ngày 26/3</h2>
+<p>Hàng năm, ngày 26/3 là mốc quan trọng đối với Đoàn Thanh niên Cộng sản Hồ Chí Minh. Trong ngày này, nhiều hoạt động được tổ chức nhằm thể hiện tinh thần tuổi trẻ, đoàn kết và nhiệt huyết. Các hoạt động này gồm nhiều lĩnh vực từ văn hóa, thể thao đến các phong trào thi đua học tập, tình nguyện, mang đến nhiều giá trị ý nghĩa cho thanh niên.</p>
+</section>
+
+<h1>Hình ảnh các hoạt động</h1>
+<div class="tv-frame">
+    <div class="image-slider">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="slide"><img src="n.jpg" class="img"></div>
+        <div class="slide"><img src="n1.jpg" class="img"></div>
+        <div class="slide"><img src="n2.jpg" class="img"></div>
+        <div class="slide"><img src="n3.jpg" class="img"></div>
+        <div class="slide"><img src="n4.jpg" class="img"></div>
+        <div class="slide"><img src="n5.jpg" class="img"></div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+<section>
+<h2>Lời Cảm Ơn Đến Các Nhà Tổ Chức</h2>
+<p>Chúng em xin gửi lời cảm ơn chân thành đến các thầy cô, anh chị đoàn viên, và các tổ chức đã tạo điều kiện để chúng em có một sân chơi ý nghĩa. Những hoạt động này không chỉ giúp chúng em phát triển kỹ năng mà còn góp phần xây dựng tình đoàn kết trong cộng đồng.</p>
+</section>
+
+<footer>
+<p>&copy; 2025 Trường THPT Krông Bông - Đắk Lắk</p>
+<p><strong>Tên nhóm:</strong> Nhóm 6 | <strong>Lớp:</strong> 12A4</p>
+<p><strong>Mail liên hệ:</strong> nhom6xyzhungde123@gmail.com</p>
+<p><strong>Số điện thoại:</strong> 0945337227</p>
+<li>Website: <a href="index.html" class="link">Báo tường ngày thành lập Đoàn 26/3</a></li>
+</footer>
+
+<script>
+let slideIndex = 0;
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+
+function changeSlide(n) {
+    slideIndex += n;
+    let slides = document.getElementsByClassName("slide");
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+window.onload = function() {
+    showSlides();
+};
+</script>
+</body>
+</html>

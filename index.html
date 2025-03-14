@@ -1,108 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Trường THPT Krông Bông</title> <!--Lệnh tiêu đề-->
+   <link rel="stylesheet" href="krb.css" type="text/css"> <!-- Liên kết đến file CSS -->
 </head>
-<title>CLB THPT Krong Bông</title>
 <body>
-  <header>
-    <div class="banner">
-      <h1>CÂU LẠC BỘ NGOẠI KHÓA TRƯỜNG TRUNG HỌC PHỔ THÔNG KRONG BÔNG</h1>
-    </div>
+    <!-- Biểu ngữ nhấp nháy chào mừng ngày 26/3 -->
+    <div class="blinking-banner">CHÀO MỪNG NGÀY 26/3</div>
+    
+    <div class="banner" style="color: rgb(179, 201, 19);"></div>
+    
+    <!-- Phần slogan với hiệu ứng chạy chữ -->
     <div class="slogan">
-      <div class="row">
-        <div class="block_3"><h2>NĂNG ĐỘNG</h2><p>HOẠT ĐỘNG NĂNG NỔ - HIỆU QUẢ</p></div>
-        <div class="block_3"><h2>ĐAM MÊ</h2><p>CHÁY HẾT MÌNH TRONG CÁC CUỘC CHƠI</p></div>
-        <div class="block_3"><h2>TỎA SÁNG</h2><p>GIÀNH GIẢI THƯỞNG CAO NHẤT</p></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Phần "Học siêu - Chơi đỉnh" -->
-  <div class="wrapper">
-	<div>
-	  <div class="cell_text">
-		<h3>Học siêu - Chơi đỉnh</h3>
-		<p>Các thành tích đạt được</p>
-	  </div>
-	  <ul>
-		<li>🏅 03 HCV Bơi lội</li>
-		<li>🥇 02 HCV, 🥈 06 HCB và 🥉 05 HCĐ Võ Thuật</li>
-		<li>⚽ 01 giải ba môn Bóng đá nam</li>
-		<li>🥈 01 giải nhì Hội thi biểu diễn âm nhạc</li>
-	  </ul>
-	</div>
-	<div class="container">
-		<div class="cell_img">
-			<img class="img-vannghe" src="vannghe.JPG">
-			<img class="img-dabanh" src="dabanh.JPG">
-			<img class="img-huychuong" src="huychuongbongda.jpg">
-		</div>
-	  </div>
-	</div>
-  </div>
-  
-
-  <!-- Phần "CLB Thể Thao" -->
-  <div class="container1">
-    <div class="img1">
-        <div class="cell_img1">
-            <img src="banh.png">
-            <img src="badminton.png">
-            <img src="basketball.png">
-            <img src="volleyball.png">
+        <div class="marquee-bar">
+            <span class="marquee-text" style="color: #ff4141; font-size: 50px;">
+                <b>Tập thể lớp 12A4 - THPT Krông Bông - Niên Khóa 2024-2025</b>
+            </span>
         </div>
+        <!-- Châm ngôn -->
+        <div class="hex" style="color: rgb(105, 105, 0);">Chất lượng</div>
+        <div class="hex" style="color: rgb(8, 255, 95); ">Hiệu quả</div>
+        <div class="hex" style="color: rgb(255, 0, 195);">Sáng tạo</div>
     </div>
-    <div class="text">
-        <h3>CLB Thể Thao</h3>
+    
+    <!-- Nội dung chính với các liên kết đến các trang khác -->
+    <div class="content">
+        <a href="page1.html" class="block">
+            <img src="h0.jpg" alt="Ảnh 1">
+            <p>Thể Thao Chào Mừng 26/3</p>
+        </a>
+        <a href="page2.html" class="block">
+            <img src="h2.jpg" alt="Ảnh 2">
+            <p>Văn Nghệ Chào Mừng 26/3</p>
+        </a>
+        <a href="page3.html" class="block">
+            <img src="h3.jpg" alt="Ảnh 3">
+            <p>Các hoạt động Trong Ngày 26/3</p>
+        </a>
+        <a href="page4.html" class="block">
+            <img src="h4.jpg" alt="Ảnh 4">
+            <p>Chào mừng ngày thành lập đoàn thanh niên Việt Nam</p>
+        </a>
+    </div>
+    
+    <!-- Nút mở thanh tác vụ -->
+    <div class="taskbar-toggle" onclick="toggleTaskbar()">☰</div>
+    
+    <!-- Thanh tác vụ với các liên kết đăng nhập, nạp VIP, donate và hỗ trợ -->
+    <div class="taskbar" id="taskbar">
         <ul>
-            <li>Bóng đá</li>
-            <li>Bóng chuyền</li>
-            <li>Bóng rổ</li>
-            <li>Cầu lông</li>
+            <li><a href="login.html">Đăng nhập</a></li>
+            <li><a href="vip.html">Nạp VIP</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="help.html">Tư vấn hỗ trợ</a></li>
         </ul>
     </div>
-    <div class="separator"></div> <!-- Gạch ngang -->
-    <button class="btn-circle" onclick="location.href='thetheo.html'">
-        ⚽
-    </button>
+    
+    <!-- Biểu tượng tài khoản để mở hộp đăng nhập -->
+    <div class="account-icon" onclick="toggleLoginBox()"></div>
+    
+    <!-- Hộp đăng nhập -->
+    <div class="login-box" id="loginBox">
+        <input type="text" placeholder="Tên đăng nhập">
+        <input type="password" placeholder="Mật khẩu">
+        <button>Đăng nhập</button>
     </div>
-</div>
+    
+    <!-- Phần chân trang với thông tin liên hệ -->
+    <footer>
+        <p>&copy; 2025 Trường THPT Krông Bông - Đắk Lắk</p>
+        <p><strong>Tên nhóm:</strong> Nhóm 6 | <strong>Lớp:</strong> 12A4</p>
+        <p><strong>Mail liên hệ:</strong> nhom6xyzhungde123@gmail.com</p>
+        <p><strong>Số điện thoại:</strong> 0945337227</p>
+    </footer>
+    
+    <!-- JavaScript để điều khiển hộp đăng nhập và thanh tác vụ -->
+    <script>
+        function toggleLoginBox() {
+            var loginBox = document.getElementById("loginBox");
+            if (loginBox.style.display === "block") {
+                loginBox.style.display = "none";
+            } else {
+                loginBox.style.display = "block";
+            }
+        }
 
-
-  <!-- Phần "CLB Nghệ thuật" -->
-  <div class="picture">
-	<div class="text">
-	  <h3>CLB Nghệ Thuật</h3>
-	  <ul>
-		<li>Mĩ Thuật</li>
-		<li>Nhiếp Ảnh</li>
-		<li>Âm Nhạc</li>
-		<li>Khiêu Vũ</li>
-	  </ul>
-	</div>
-	<div class="separator"></div> <!-- Gạch ngang -->
-    <button class="btn-circle" onclick="location.href='nghethuat.html'">
-        ✏️
-    </button>
-	<div class="call">
-	  <img class="img-mythuat" src="mythuat.jpg">
-	  <img class="img-amnhac" src="amnhac.jpg">
-	</div>
-  </div>
-
-  <!-------------------->
-  <div class="footer-container">
-    <div class="contact-info">
-        <ul>
-            <li>Điện Thoại: 0867489322</li>
-            <li>Website: <a href="index.html" class="link">CLB Ngoại Khoá THPT Krong Bông</a></li>
-        </ul>
-    </div>
-    <p class="copyright">&copy; 2025 12A4_NHOM 4.</p>
-</div>
-
-
+        function toggleTaskbar() {
+            var taskbar = document.getElementById("taskbar");
+            taskbar.classList.toggle("open");
+        }
+    </script>
 </body>
 </html>

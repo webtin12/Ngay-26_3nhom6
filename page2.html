@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Văn nghệ Chào Mừng 26/3</title>
+<link href="krb1.css" rel="stylesheet" type="text/css">
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .intro-animation {
+        animation: fadeIn 1.5s ease-out;
+    }
+    .typing::after {
+        content: '|';
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px yellow; }
+        50% { text-shadow: 0 0 20px red; }
+        100% { text-shadow: 0 0 5px yellow; }
+    }
+    .highlight {
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: glow 1.5s infinite;
+    }
+</style>
+</head>
+<body onload="startTyping()">
+<header>
+<div class="banner">
+<h1 id="typing-text" class="typing"></h1>
+</div>
+</header>
+
+<section>
+<h2>Chào Mừng Ngày Thành Lập Đoàn 26/3</h2>
+<p>Ngày 26/3 là dịp đặc biệt để đoàn viên, thanh niên thể hiện tinh thần nhiệt huyết, sáng tạo và tình yêu nghệ thuật qua những tiết mục văn nghệ đặc sắc.</p>
+</section>
+
+<h1>Các Hoạt Động Văn Nghệ Chào Mừng</h1>
+<table>
+<tr>
+<td class="cell_text">
+<h3>Cuộc Thi Văn Nghệ</h3>
+<p>Các nội dung thi hấp dẫn:</p>
+<ul>
+<li>Hát đơn, song ca, tam ca</li>
+<li>Múa tập thể</li>
+<li>Biểu diễn nhạc cụ</li>
+<li>Nhảy hiện đại</li>
+</ul>
+
+<div class="image-sequence">
+    <img src="vn1.jpg" class="img" alt="Tiết mục 1">
+    <img src="vn2.jpg" class="img" alt="Tiết mục 2">
+    <img src="vn3.jpg" class="img" alt="Tiết mục 3">
+    <img src="vn4.jpg" class="img" alt="Tiết mục 4">
+    <img src="vn5.jpg" class="img" alt="Tiết mục 5">
+    <img src="vn6.jpg" class="img" alt="Tiết mục 6">
+</div>
+</td>
+</tr>
+</table>
+
+<section>
+<h2>Tri Ân Và Cảm Nhận</h2>
+<p>Chúng em xin gửi lời tri ân đến các thầy cô và các anh chị đoàn viên đã tạo điều kiện để chúng em thể hiện tài năng và đam mê nghệ thuật.</p>
+</section>
+
+<footer>
+<p>&copy; 2025 Trường THPT Krông Bông - Đắk Lắk</p>
+<p><strong>Tên nhóm:</strong> Nhóm 6 | <strong>Lớp:</strong> 12A4</p>
+<p><strong>Mail liên hệ:</strong> nhom6xyzhungde123@gmail.com</p>
+<p><strong>Số điện thoại:</strong> 0945337227</p>
+<ul>
+<li>Điện thoại:0782770352</li>
+<li>Website: <a href="index.html" class="link">Báo tường ngày 26/3</a></li>
+</ul>
+</div>
+
+<p>Đăng ký tham gia ngay: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZov3zb8OF7dN-HpVaqVY1aOivpG8tDqiFqzjfhzlwoSIdew/viewform?usp=header" class="highlight">Đăng ký</a></p>
+</footer>
+
+<script>
+function startTyping() {
+    const text = "CHƯƠNG TRÌNH VĂN NGHỆ CHÀO MỪNG 26/3";
+    let i = 0;
+    const speed = 100;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
+}
+</script>
+</body>
+</html>

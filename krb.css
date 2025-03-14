@@ -1,0 +1,258 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner */
+.banner {
+    background: url("y.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Giữ nền cố định khi cuộn trang */
+  padding: 12rem 0;
+  text-align: center;
+
+  
+}
+
+/* Slogan  */
+.slogan {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    padding: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.hex {
+    background: rgb(240, 248, 255);
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+/* Nội dung chính */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Ô chứa nội dung */
+.block {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* Ảnh trong nội dung */
+.block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    image-rendering: auto;
+    filter: contrast(110%) brightness(105%);
+}
+
+/* Mô tả ảnh */
+.block p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hiệu ứng hover để tạo cảm giác có thể click */
+.block:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Chỉnh block thành button để điều hướng */
+.block a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer */
+footer {
+    background: #a1a1a1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Thanh nhiệm vụ nổi gồm 4 ô */
+.taskbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.taskbar div {
+    background: #ff6600;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.taskbar div:hover {
+    background: #ff3300;
+}
+
+/* Nút bấm mở thanh nhiệm vụ */
+.toggle-taskbar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-taskbar:hover {
+    background: #ff3300;
+}
+
+/* Icon tài khoản */
+.account-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: url('krb.png') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hộp đăng nhập */
+.login-box {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+.taskbar {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background: #333;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    padding-top: 50px;
+}
+.taskbar ul {
+    list-style: none;
+    padding: 0;
+}
+.taskbar ul li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+.taskbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.taskbar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #ff6600;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.taskbar.open {
+    right: 0;
+}
+.account-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: url('krb.png') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.slogan {
+    position: relative;
+    z-index: 1;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.blinking-banner {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    animation: blink 1s infinite;
+}
+.marquee-bar {
+    width: 100%;
+    background: rgba(79, 86, 68, 0.45);
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+.marquee-text {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}

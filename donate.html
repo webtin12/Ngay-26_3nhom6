@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate - Hỗ trợ phát triển</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('tt.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .overlay {
+      background: rgba(255, 255, 255, 0.95);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .info {
+      text-align: left;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .info p {
+      margin: 10px 0;
+    }
+    .donate-btn {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+    .donate-btn:hover {
+      background-color: #218838;
+    }
+    .copy-info {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .copy-info:hover {
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <h1>Ủng Hộ Chúng Tôi</h1>
+      <p>Bạn có thể hỗ trợ chúng tôi qua chuyển khoản ngân hàng. Mọi đóng góp đều rất quý giá để phát triển các dự án tiếp theo.</p>
+      <div class="info">
+        <p><strong>Chủ tài khoản:</strong> Lê Quốc Tuấn</p>
+        <p><strong>Số tài khoản:</strong> 0945337227</p>
+        <p><strong>Ngân hàng:</strong> MB Bank</p>
+      </div>
+      <div class="copy-info" onclick="copyInfo()">
+        Nhấn để sao chép thông tin chuyển khoản
+      </div>
+      <br>
+      <a href="#" class="donate-btn">Xác nhận Ủng Hộ</a>
+    </div>
+  </div>
+
+  <script>
+    function copyInfo() {
+      const info = "Chủ tài khoản: Lê Quốc Tuấn\nSố tài khoản: 0945337227\nNgân hàng: MB Bank";
+      navigator.clipboard.writeText(info).then(() => {
+        alert("Thông tin chuyển khoản đã được sao chép vào clipboard!");
+      }).catch(err => {
+        alert("Không thể sao chép thông tin: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
